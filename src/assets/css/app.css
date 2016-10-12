@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    background: #525252;
+    color: #444444;
+}
+
+.outer-container {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.inner {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.enter-location {
+    background: #ffffff;
+    padding: 40px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.location-form {
+    display: flex;
+    justify-content: center;
+}
+
+.enter-location .form-field {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+}
+
+.button {
+    background: #6dc5dd;
+    border: none;
+    padding: 18px 30px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.enter-location input {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.city {
+    text-align: center;
+    padding: 20px 0;
+}
+.city h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.tile {
+    background: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    max-width: 350px;
+    width: 33%;
+    overflow: hidden;
+}
+
+.tile-inner-loading {
+    text-align: center;
+    min-height: 100px;
+}
+.tile-inner-loading:before {
+    content: url('../images/loader.svg');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.summary {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weather-block {
+    background: #6dc5dd;
+    width: 50%;
+}
+
+.short-info {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.short-info .temp {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.short-info p {
+    margin-top: 3px;
+}
+
+.weather-block {
+    position: relative;
+}
+
+.weather-block:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #ffffff;
+}
+
+.additional {
+    display: none;
+}
+
+.additional.show {
+    display: block;
+}
+
+.more-info li {
+    padding: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.more-info span:before {
+    font-size: 26px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.more-info .toggle {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px 0;
+    transition: background .3s ease;
+    color: #000000;
+}
+.more-info .toggle:hover {
+    background: #eeeeee;
+}
+
+.last-updated {
+    font-size: 11px;
+    text-align: center;
+}

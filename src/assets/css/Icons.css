@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?3q0xsu');
+    src:  url('../fonts/icomoon.eot?3q0xsu#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?3q0xsu') format('truetype'),
+        url('../fonts/icomoon.woff?3q0xsu') format('woff'),
+        url('../fonts/icomoon.svg?3q0xsu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-visibility:before {
+    content: "\e904";
+}
+.icon-cloudy:before {
+    content: "\e900";
+}
+.icon-mostlysunny:before,
+.icon-partlycloudy:before,
+.icon-partlysunny:before {
+    content: "\e901";
+}
+.icon-rain:before,
+.icon-chancerain:before {
+    content: "\e903";
+}
+.icon-sleet:before {
+    content: "\e906";
+}
+.icon-tstorms:before,
+.icon-chancetstorms:before {
+    content: "\e909";
+}
+.icon-chancesnow:before,
+.icon-flurries:before,
+.icon-chanceflurries:before,
+.icon.chancesleet:before {
+    content: "\e910";
+}
+.icon-mostlycloudy:before {
+    content: "\e913";
+}
+.icon-fog:before,
+.icon-hazy:before {
+    content: "\e914";
+}
+.icon-sunny:before,
+.icon-clear:before {
+    content: "\e915";
+}
+.icon-wind:before {
+    content: "\e916";
+}
+.icon-thermometer-half:before {
+    content: "\e917";
+}
+.icon-snow:before {
+    content: "\e918";
+}
+.icon-humid:before {
+    content: "\e902";
+}
