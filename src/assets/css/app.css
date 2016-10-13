@@ -85,7 +85,6 @@ body {
     background: #ffffff;
     border-radius: 5px;
     position: relative;
-    max-width: 350px;
     width: 33%;
     overflow: hidden;
 }
