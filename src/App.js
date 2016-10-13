@@ -12,7 +12,7 @@ class App extends Component {
         super();
 
         this.state = {
-            weatherConditions: false
+            weatherConditions: { loaded: false }
         }
     }
 
@@ -25,7 +25,9 @@ class App extends Component {
 
             this.setState({
                 weatherConditions: {
+                    loaded: true,
                     city: dataSrc.display_location.city,
+                    state: dataSrc.display_location.state,
                     temp: dataSrc.temp_f,
                     weather: dataSrc.weather,
                     icon: dataSrc.icon,
@@ -40,6 +42,11 @@ class App extends Component {
 
         });
 
+    }
+
+    reloadView() {
+        const condition = this.state.weatherConditions;
+        this.getWeatherConditions(condition.city, condition.state);
     }
 
     componentDidMount() {
@@ -65,7 +72,7 @@ class App extends Component {
                 </div>
                 <div className="outer-container">
                     <div className="inner">
-                        <WeatherCard data={this.state.weatherConditions} />
+                        <WeatherCard data={this.state.weatherConditions} reloadView={this.reloadView.bind(this)}/>
                     </div>
                 </div>
             </div>

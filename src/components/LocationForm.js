@@ -21,7 +21,7 @@ export default class LocationForm extends Component {
                 <div className="form-field">
                     <input ref="state" name="state" type="text" placeholder="Enter a state" required />
                 </div>
-                <button type="submit" className="button">Add Location</button>
+                <button type="submit" className="button">View Weather</button>
             </form>
         );
     }

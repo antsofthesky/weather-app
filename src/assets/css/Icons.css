@@ -24,6 +24,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-reload:before {
+  content: "\e984";
+}
+
 .icon-visibility:before {
     content: "\e904";
 }
