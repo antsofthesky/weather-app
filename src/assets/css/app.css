@@ -51,7 +51,6 @@ body {
 
 .enter-location .form-field {
     width: 30%;
-    float: left;
     margin-right: 5%;
 }
 
@@ -69,6 +68,7 @@ body {
     padding: 15px;
     font-size: 18px;
     font-weight: 300;
+    border: 1px solid #cccccc;
 }
 
 .city {
@@ -188,6 +188,26 @@ body {
     color: #444444;
     cursor: pointer;
 }
+
 .reload-trigger span {
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .location-form {
+        display: block;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .enter-location .form-field {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .tile {
+        width: 100%;
+    }
+
 }
