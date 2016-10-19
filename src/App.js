@@ -8,12 +8,23 @@ import LocationForm from './components/LocationForm';
 
 class App extends Component {
 
-    constructor() {
-        super();
+    state = {
+        loaded: false,
+        data: {},
+    };
 
+    constructor(props) {
+        super(props);
+
+        // @rfinni you can define your state here, you can also do it like on line 11 above
         this.state = {
             weatherConditions: { loaded: false }
         }
+
+        // ideally, you want to handle function binding here so when you use or pass functions down
+        // as properties, they are bound to this components/objects scope.
+        this.getWeatherConditions = this.getWeatherConditions.bind(this);
+        this.reloadView = this.reloadView.bind(this);
     }
 
     getWeatherConditions(city, state) {
@@ -67,12 +78,12 @@ class App extends Component {
             <div className="page">
                 <div className="enter-location">
                     <div className="outer-container">
-                        <LocationForm conditions={this.getWeatherConditions.bind(this)} />
+                        <LocationForm conditions={this.getWeatherConditions} />
                     </div>
                 </div>
                 <div className="outer-container">
                     <div className="inner">
-                        <WeatherCard data={this.state.weatherConditions} reloadView={this.reloadView.bind(this)}/>
+                        <WeatherCard data={this.state.weatherConditions} reloadView={this.reloadView}/>
                     </div>
                 </div>
             </div>
